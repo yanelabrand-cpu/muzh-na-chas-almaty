@@ -18,15 +18,15 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <WhatsAppButton
-            className="hidden px-4 py-2.5 text-sm sm:inline-flex"
-            label="Написать в WhatsApp"
-          />
-          <WhatsAppButton
-            className="sm:hidden"
-            iconOnly
-            label="Написать в WhatsApp"
-          />
+          <span className="hidden sm:inline-flex">
+            <WhatsAppButton
+              className="px-4 py-2.5 text-sm"
+              label="Написать в WhatsApp"
+            />
+          </span>
+          <span className="inline-flex sm:hidden">
+            <WhatsAppButton iconOnly label="Написать в WhatsApp" />
+          </span>
           <CallButton
             className="px-3 py-2.5 text-xs sm:px-4 sm:text-sm"
             label={MASTER_NAME}
