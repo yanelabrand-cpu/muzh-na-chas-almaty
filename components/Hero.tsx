@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Zap, Sparkles, ShieldCheck, MapPin } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { PRICE_IN_CITY, PRICE_OUT_OF_CITY } from "@/lib/constants";
 
 const badges = [
   { icon: Zap, label: "Быстро" },
@@ -34,6 +35,11 @@ export default function Hero() {
           Устраним любую бытовую поломку за 1 визит. Работаем круглосуточно,
           выезд в день обращения.
         </p>
+
+        <div className="mt-4 flex flex-col gap-1 text-sm font-medium text-amber-300 sm:text-base">
+          <span>{PRICE_IN_CITY}</span>
+          <span>{PRICE_OUT_OF_CITY}</span>
+        </div>
 
         <div className="mt-7 flex flex-wrap gap-3">
           {badges.map(({ icon: Icon, label }) => (

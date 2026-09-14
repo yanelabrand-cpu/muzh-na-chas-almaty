@@ -1,5 +1,6 @@
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CallButton from "@/components/CallButton";
+import { MASTER_NAME, PHONE_NUMBER } from "@/lib/constants";
 
 export default function FinalCta() {
   return (
@@ -14,7 +15,10 @@ export default function FinalCta() {
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <WhatsAppButton className="px-8 py-4 text-lg" />
-          <CallButton className="border-2 border-navy-950 bg-navy-950 px-8 py-4 text-lg text-white hover:brightness-125" />
+          <CallButton
+            className="border-2 border-navy-950 bg-navy-950 px-8 py-4 text-lg text-white hover:brightness-125"
+            label={`${MASTER_NAME}, ${PHONE_NUMBER}`}
+          />
         </div>
       </div>
     </section>

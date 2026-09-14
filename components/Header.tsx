@@ -1,7 +1,7 @@
 import { Wrench } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CallButton from "@/components/CallButton";
-import { PHONE_NUMBER } from "@/lib/constants";
+import { MASTER_NAME } from "@/lib/constants";
 
 export default function Header() {
   return (
@@ -29,7 +29,7 @@ export default function Header() {
           />
           <CallButton
             className="px-3 py-2.5 text-xs sm:px-4 sm:text-sm"
-            label={PHONE_NUMBER}
+            label={MASTER_NAME}
           />
         </div>
       </div>

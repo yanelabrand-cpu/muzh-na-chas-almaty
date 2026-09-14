@@ -1,6 +1,7 @@
 import { MapPin, MessageCircle, Phone, Wrench } from "lucide-react";
 import {
   CITY,
+  MASTER_NAME,
   PHONE_HREF,
   PHONE_NUMBER,
   WHATSAPP_URL,
@@ -27,7 +28,7 @@ export default function Footer() {
         <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-slate-300">
           <a href={PHONE_HREF} className="flex items-center gap-2 hover:text-amber-400">
             <Phone className="h-4 w-4 text-amber-500" />
-            {PHONE_NUMBER}
+            {MASTER_NAME}, {PHONE_NUMBER}
           </a>
           <a
             href={WHATSAPP_URL}
@@ -45,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-5 text-xs text-slate-500">
-          © {new Date().getFullYear()} Муж на час 24/7. Все права защищены.
+          © 2018 Муж на час 24/7. Все права защищены.
         </div>
       </div>
     </footer>

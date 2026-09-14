@@ -2,12 +2,19 @@ export const WHATSAPP_URL = "https://wa.me/77780502600";
 export const PHONE_NUMBER = "+7 778 050 26 00";
 export const PHONE_HREF = "tel:+77780502600";
 export const CITY = "Алматы";
+export const MASTER_NAME = "Вадим";
+
+export const PRICE_IN_CITY = "Выезд мастера в черте города — 5000 тенге";
+export const PRICE_OUT_OF_CITY =
+  "Выезд мастера за черту города — от 10 000 тенге";
 
 export type Service = {
   title: string;
-  icon: "wrench" | "zap" | "sofa" | "hammer" | "settings";
+  icon: "wrench" | "zap" | "sofa" | "hammer" | "settings" | "droplets";
   image: string;
-  items: string[];
+  items?: string[];
+  sections?: { heading: string; items: string[] }[];
+  highlight?: { heading: string; items: string[] };
 };
 
 export const services: Service[] = [
@@ -22,11 +29,50 @@ export const services: Service[] = [
       "Установка и замена смесителей",
       "Навеска раковин и тумб",
       "Установка сантехники",
-      "Чистка канализации",
-      "Устранение засоров любой сложности",
       "Устранение протечек",
       "Устранение мелких неисправностей",
     ],
+  },
+  {
+    title: "Чистка канализации",
+    icon: "droplets",
+    image:
+      "https://images.unsplash.com/photo-1600728601415-1784c642798d?auto=format&fit=crop&w=1200&q=70",
+    sections: [
+      {
+        heading: "Наши методы прочистки:",
+        items: [
+          "Электромеханический трос",
+          "Гидродинамическая промывка",
+          "Пневматическая прочистка",
+          "Удаление жировых отложений",
+          "Удаление ила и грязи",
+          "Удаление корней из труб",
+        ],
+      },
+      {
+        heading: "Что прочищаем:",
+        items: [
+          "Засор раковины",
+          "Ванну и душевую",
+          "Унитаз",
+          "Кухонную канализацию",
+          "Стояки",
+          "Лежаки в подвалах",
+          "Наружную канализацию",
+          "Ливневую канализацию",
+          "Канализацию частных домов",
+        ],
+      },
+    ],
+    highlight: {
+      heading: "Аварийная служба 24/7",
+      items: [
+        "Современное профессиональное оборудование",
+        "Быстрое устранение засоров любой сложности",
+        "Работаем с квартирами, домами, кафе, ресторанами, офисами и предприятиями",
+      ],
+    },
   },
   {
     title: "Электрика",
